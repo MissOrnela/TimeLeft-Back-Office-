@@ -5,6 +5,3 @@ import { EventTimeLeft } from "./type";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
-
-
-}

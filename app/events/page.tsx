@@ -5,7 +5,7 @@ import Sort from "./ui/Sort";
 import Pagination from "./ui/Pagination";
 import EventsTable from "./ui/EventsTable";
 
-type Props = {
+type searchParamsProps = {
   searchParams: {
     filter?: string;
     sort?: keyof EventTimeLeft;
@@ -14,7 +14,7 @@ type Props = {
   };
 };
 
-export default async function EventsPage({ searchParams }: Props) {
+export default async function EventsPage({ searchParams }: searchParamsProps) {
   //first getting all events available
   const eventsList: EventTimeLeft[] = await getAllEvents();
   if (eventsList.length === 0) return <div> no events available</div>;
@@ -31,7 +31,8 @@ export default async function EventsPage({ searchParams }: Props) {
   const sort = search.sort ?? "date";
   const order = search.order ?? "asc";
   const page = Number(search.page ?? 1);
-  const PAGE_SIZE = 5;
+  //setting default page size to 10
+  const PAGE_SIZE = 10;
   //we filter firts
   const filteredEvents = filter
     ? eventsList.filter((e) => e.status === filter)

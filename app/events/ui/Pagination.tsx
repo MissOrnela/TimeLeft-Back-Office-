@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 export default function Pagination({
   totalEvents,
   page,
-  pageSize = 5,
+  pageSize = 10,
 }: {
   totalEvents: number;
   page: number;

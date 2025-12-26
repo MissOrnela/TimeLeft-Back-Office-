@@ -1,4 +1,11 @@
+## Technical stack
+
 This app was built using npx create-next-app
+
+- Next.js 16 (App Router)
+- TypeScript
+- React 19
+- Shadcn UI (Table, Dialog, Buttons)
 
 # Getting Started
 
@@ -28,9 +35,11 @@ npm run dev
 
 Open [http://localhost:3000/events](http://localhost:3000/events) with your browser to see the result.
 
-## Technical stack
+## My point of view
 
-- Next.js 16 (App Router)
-- TypeScript
-- React 19
-- Shadcn UI (Table, Dialog, Buttons)
+I implement sorting by date and type, as well as filtering by status .
+I decide to implement server-side pagination, as I believe it is more efficient for large data sets. This ensures consistency of results , as it does not depend on the power of the client application and reduces memory usage.
+
+## Improvement
+
+Perhaps add a search bar to make it easier to find events.

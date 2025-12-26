@@ -7,7 +7,7 @@ export default function Filter({
   defaultFilter?: string;
 }) {
   const [filterStatus, setFilterStatus] = useState(defaultFilter);
-  const statuses = ["", "upcoming", "live", "past"];
+  const statusList = ["", "upcoming", "live", "past"];
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value;
@@ -24,7 +24,7 @@ export default function Filter({
       onChange={handleChange}
       className="border p-1 rounded"
     >
-      {statuses.map((status) => (
+      {statusList.map((status) => (
         <option key={status} value={status}>
           {status === "" ? "Status" : status}
         </option>

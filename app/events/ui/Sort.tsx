@@ -44,7 +44,6 @@ export default function Sort({
       >
         <option value="date">Date</option>
         <option value="type">Type</option>
-        <option value="status">Status</option>
       </select>
 
       <select

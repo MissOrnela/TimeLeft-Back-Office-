@@ -53,7 +53,9 @@ export default function EventsTable({
               onClick={() => setSelectedEvent(event)}
             >
               <TableCell>{event.type}</TableCell>
-              <TableCell>{new Date(event.date).toLocaleDateString()}</TableCell>
+              <TableCell>
+                {new Date(event.date).toISOString().split("T")[0]}
+              </TableCell>
               <TableCell>{event.zone.name}</TableCell>
               <TableCell>{event.zone.city.name}</TableCell>
               <TableCell>{event.zone.city.country.name}</TableCell>
@@ -76,7 +78,9 @@ export default function EventsTable({
             </DialogHeader>
             <div className="space-10">
               <p>Type: {selectedEvent.type}</p>
-              <p>Date: {new Date(selectedEvent.date).toLocaleDateString()}</p>
+              <p>
+                Date: {new Date(selectedEvent.date).toISOString().split("T")[0]}
+              </p>
               <p>Zone: {selectedEvent.zone.name}</p>
               <p>City: {selectedEvent.zone.city.name}</p>
               <p>Country: {selectedEvent.zone.city.country.name}</p>

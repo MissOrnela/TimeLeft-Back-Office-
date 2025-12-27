@@ -38,7 +38,7 @@ Open [http://localhost:3000/events](http://localhost:3000/events) with your brow
 ## My point of view
 
 I implement sorting by date and type, as well as filtering by status .
-I decide to implement server-side pagination, as I believe it is more efficient for large data sets. This ensures consistency of results , as it does not depend on the power of the client application and reduces memory usage.
+I decide to implement server-side sorting and filtering, as I believe it is more efficient for large data sets. This ensures consistency of results , as it does not depend on the power of the client application and reduces memory usage.
 
 ## Improvement
 
